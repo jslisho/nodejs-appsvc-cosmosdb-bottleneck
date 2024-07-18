@@ -10,7 +10,8 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  webAppName: 'load-test-app'
+  SUFFIX: $(Build.BuildId)
+  webAppName: 'load-test-$(SUFFIX)-app'
   serviceConnection: 'LoadTestingSC'
   azureSubscriptionId: 'c7d02d17-0510-419e-ab47-162902b0006b'
   loadTestResource: 'c7d02d17-0510-419e-ab47-162902b0006b'
